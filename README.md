@@ -10,4 +10,7 @@ Solved 145/1384 problems.
 ## Date - 20/07/2020
 Solved 167/1389 problems.
 
+## Date - 25/07/2020
+Solved 200/1394 problems.
+
 
