@@ -1,13 +1,21 @@
 class Solution {
-    public boolean detectCapitalUse(String word)
+    public boolean detectCapitalUse(String word) 
     {
-        String a=word.toUpperCase();
-        String b=word.toLowerCase();
-        String c=Character.toUpperCase(word.charAt(0))+word.substring(1).toLowerCase();
-        if(word.equals(a)||word.equals(b)||word.equals(c))
+        if(word.equals(""))
         {
             return true;
         }
-        return false;
+        String s=word.toUpperCase();
+        String ss=word.toLowerCase();
+        String sss=Character.toUpperCase(word.charAt(0))+ss.substring(1);
+        if(word.equals(s)||word.equals(ss)||word.equals(sss))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
     }
 }
