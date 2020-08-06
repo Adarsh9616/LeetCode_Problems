@@ -22,3 +22,6 @@ Solved 240/1399 problems.
 
 ## Date - 4/08/2020
 Solved 260/1403 problems.
+
+## Date - 6/08/2020
+Solved 267/1404 problems.
