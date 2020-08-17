@@ -1,10 +1,29 @@
 class Solution {
     public int[] distributeCandies(int candies, int num_people) 
     {
-       int[] people = new int[num_people];
-        for (int give = 0; candies > 0; candies -= give) {
-            people[give % num_people] +=  Math.min(candies, ++give);
+        int candyGiven=1;
+        int i=0;
+        int ar[]=new int[num_people];
+        while(candies-candyGiven>0)
+        {
+            if(i==num_people)
+            {
+                i=0;
+            }
+            ar[i]+=candyGiven;
+            candies-=candyGiven;
+            i++;
+            candyGiven++;
         }
-        return people;
+        if(candies>0)
+        {
+            if(i==num_people)
+            {
+                i=0;
+            }
+            ar[i]+=candies;
+        }
+            
+        return ar;
     }
 }
