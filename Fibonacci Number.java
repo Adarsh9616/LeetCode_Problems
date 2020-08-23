@@ -1,17 +1,15 @@
-class Solution {
-    public int fib(int N)
+class Solution 
+{
+    public int fib(int N) 
     {
-        int i=0;
-        int j=1;
-        int k=0;
-        while(k<N)
+        if(N==0)
         {
-            int temp=i;
-            i=j;
-            j=temp+j;        
-            k++;
+            return 0;
         }
-        return i;
-        
+        if(N==1)
+        {
+            return 1;
+        }
+        return fib(N-1)+fib(N-2);
     }
 }
