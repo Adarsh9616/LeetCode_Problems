@@ -1,30 +1,18 @@
 class Solution {
     public int[] sortArrayByParity(int[] A) 
     {
-        ArrayList<Integer> e=new ArrayList<>();
-        ArrayList<Integer> o=new ArrayList<>();
-        for(int i:A)
-        {
-            if((i&1)==0)
-            {
-                e.add(i);
+         int i = 0, j = A.length - 1;
+        while (i < j) {
+            if (A[i] % 2 > A[j] % 2) {
+                int tmp = A[i];
+                A[i] = A[j];
+                A[j] = tmp;
             }
-            else
-            {
-                o.add(i);
-            }
+
+            if (A[i] % 2 == 0) i++;
+            if (A[j] % 2 == 1) j--;
         }
-        int i=0;
-        for(int j:e)
-        {
-            A[i]=j;
-            i++;
-        }
-        for(int j:o)
-        {
-            A[i]=j;
-            i++;
-        }
+
         return A;
     }
 }
