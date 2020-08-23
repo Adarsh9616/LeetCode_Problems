@@ -11,21 +11,16 @@
 class Solution {
     public ListNode swapPairs(ListNode head) 
     {
-        ListNode cur=head;
-        solve(cur);
-        return head;
-        
-    }
-    public void solve(ListNode c1)
-    {
-        if(c1==null||c1.next==null)
+        if(head==null||head.next==null)
         {
-            return;
+            return head;
         }
-        int temp=c1.val;
-        c1.val=c1.next.val;
-        c1.next.val=temp;
-        solve(c1.next.next);
+        ListNode a=head;
+        ListNode b=head.next;
+        b.next=swapPairs(b.next);
+        a.next=b.next;
+        b.next=a;
+        return b;
         
     }
 }
