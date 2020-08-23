@@ -1,15 +1,22 @@
-class Solution {
+class Solution 
+{
+    int ar[]=new int[50];
     public int climbStairs(int n) 
     {
-        int ans=0;
-        int k=0;
-        int k1=1;
-        for(int i=0;i<n;i++)
+        if(n==1)
         {
-            ans=k+k1;
-            k=k1;
-            k1=ans;
+            ar[1]=1;
+            return ar[1];
         }
-        return ans;
+        if(n==2)
+        {
+            ar[2]=2;
+            return ar[2];
+        }
+        if(ar[n]==0)
+        {
+            ar[n]= climbStairs(n-1)+climbStairs(n-2);
+        }
+        return ar[n];
     }
 }
