@@ -31,3 +31,6 @@ Solved 281/1408 problems.
 
 ## Date - 18/08/2020
 Solved 300/1417 problems.
+
+## Date - 23/08/2020
+Solved 321/1426 problems.
