@@ -18,16 +18,32 @@ class Solution
     int sum=0;
     public int sumOfLeftLeaves(TreeNode root) 
     {
+        solve(root);
+        return sum;
+    }
+    public void solve(TreeNode root)
+    {
         if(root==null)
         {
-            return 0;
+            return;
         }
-        sumOfLeftLeaves(root.left); 
-        sumOfLeftLeaves(root.right);
-        if(root.left!=null&&root.left.left==null&&root.left.right==null)
+        if(isLeaf(root.left))
         {
-            sum+= root.left.val;
+            sum+=root.left.val;
         }
-        return sum;
+        solve(root.left);
+        solve(root.right);
+    }
+    public boolean isLeaf(TreeNode root)
+    {
+        if(root==null)
+        {
+            return false;
+        }
+        if(root.left==null&&root.right==null)
+        {
+            return true;
+        }
+        return false;
     }
 }
