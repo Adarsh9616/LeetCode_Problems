@@ -1,15 +1,26 @@
 class Solution {
     public List<String> fizzBuzz(int n) 
     {
-        List<String> ans=new ArrayList<>();
+        List<String> l=new ArrayList<>();
         for(int i=1;i<=n;i++)
         {
-            if(i%15==0)ans.add("FizzBuzz");
-            else if(i%5==0)ans.add("Buzz");
-            else if(i%3==0)ans.add("Fizz");
-            else ans.add(String.valueOf(i));
+            if(i%15==0)
+            {
+                l.add("FizzBuzz");
+            }
+            else if(i%5==0)
+            {
+                l.add("Buzz");
+            }
+            else if(i%3==0)
+            {
+                l.add("Fizz");
+            }
+            else
+            {
+                l.add(""+i);
+            }
         }
-        return ans;
-        
+        return l;
     }
 }
