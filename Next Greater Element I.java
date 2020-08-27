@@ -6,17 +6,17 @@ class Solution
         Stack<Integer> s=new Stack<>();
         for(int i:nums2)
         {
-            while(!s.isEmpty()&&s.peek()<i)
+            while(!s.isEmpty()&&i>s.peek())
             {
                 m.put(s.pop(),i);
             }
             s.push(i);
         }
-        for(int i=0;i<nums1.length;i++)
+        int k=0;
+        for(int i:nums1)
         {
-            nums1[i]=m.getOrDefault(nums1[i],-1);
+            nums1[k++]=m.getOrDefault(i,-1);
         }
         return nums1;
-        
     }
 }
