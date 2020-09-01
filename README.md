@@ -39,3 +39,6 @@ Solved 334/1426 problems.
 
 ## Date - 29/08/2020
 Solved 356/1427 problems.
+
+## Date - 01/09/2020
+Solved 374/1431 problems.
