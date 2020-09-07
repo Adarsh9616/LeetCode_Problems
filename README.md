@@ -45,3 +45,6 @@ Solved 374/1431 problems.
 
 ## Date - 05/09/2020
 Solved 392/1436 problems.
+
+## Date - 08/09/2020
+Solved 408/1440 problems.
