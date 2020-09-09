@@ -15,21 +15,40 @@
  */
 class Solution 
 {
-    int sum;
-    public int sumRootToLeaf(TreeNode root) {
-        findSum(root,0);
-        return sum;
-    }
-    public void findSum(TreeNode root,int num)
+    int sum=0;
+    public int sumRootToLeaf(TreeNode root) 
     {
         if(root==null)
-            return;
-        num=num*2 + root.val;
-        findSum(root.left,num);
-        findSum(root.right,num);
-        if((root.left==null) && (root.right==null))
         {
-            sum+=num;
+            return 0;
         }
+        solve(root,0);
+        return sum;
     }
+    public void solve(TreeNode root, int n)
+    {
+        if(root==null)
+        {
+            return;
+        }
+        //System.out.println(n+"  "+root.val);
+        if(root.val==0)
+        {
+            n=n<<1;
+        }
+        else
+        {
+            n=n<<1;
+            n=n|1;
+        }
+        if(root.left==null&&root.right==null)
+        {
+            //System.out.println(n);
+            sum=sum+n;
+        }
+        solve(root.left,n);
+        solve(root.right,n);
+        
+    }
+    
 }
