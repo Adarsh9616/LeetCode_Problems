@@ -48,3 +48,5 @@ Solved 392/1436 problems.
 
 ## Date - 08/09/2020
 Solved 408/1440 problems.
+
+## Solved all Easy and Medium Problems of Top Interview Questions LeetCode.
