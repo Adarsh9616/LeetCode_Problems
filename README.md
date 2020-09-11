@@ -50,3 +50,6 @@ Solved 392/1436 problems.
 Solved 408/1440 problems.
 
 ## Solved all Easy and Medium Problems of Top Interview Questions LeetCode.
+
+## Date - 08/09/2020
+Solved 415/1441 problems.
