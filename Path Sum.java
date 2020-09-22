@@ -15,18 +15,33 @@
  */
 class Solution 
 {
+    boolean ans=false;
     public boolean hasPathSum(TreeNode root, int sum) 
     {
-        if(root==null)
-        {
-            return false;
-        }
-        if(root.left==null&&root.right==null&&root.val==sum)
-        {
-            return true;
-        }
-        return hasPathSum(root.left,sum-root.val)||hasPathSum(root.right,sum-root.val);
+        solve(root,sum,0);
+        return ans;
     }
-   
+    public void solve(TreeNode t,int sum,int newsum)
+    {
+        if(t==null)
+        {
+            return;
+        }
+        if(t.left==null&&t.right==null)
+        {
+            newsum=newsum+t.val;
+            //System.out.println(newsum);
+            if(newsum==sum)
+            {
+                
+                ans=true;
+            }
+        }
+        newsum=newsum+t.val;
+        solve(t.left,sum,newsum); 
+        solve(t.right,sum,newsum);
+        newsum=newsum-t.val;
+        
+    }
     
 }
