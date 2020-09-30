@@ -1,38 +1,37 @@
 class Solution {
-    public int coinChange(int[] coins, int amount) 
+    public int coinChange(int[] coins, int A) 
     {
-        if(amount<1)
+        int n=coins.length;
+        long dp[][]=new long[n+1][A+1];
+        for(int j=0;j<=A;j++)
         {
-            return 0;
+            dp[0][j]=Integer.MAX_VALUE;
         }
-        int dp[]=new int[amount+1];
-        int ans=solve(coins,amount,dp);
-        return ans;
-    }
-    public int solve(int c[],int a,int dp[])
-    {
-        if(a<0)
+        for(int j=0;j<=A;j++)
         {
-            return -1;
-        }
-        if(a==0)
-        {
-            return 0;
-        }
-        if(dp[a]!=0)
-        {
-            return dp[a];
-        }
-        int min=Integer.MAX_VALUE;
-        for(int i:c)
-        {
-            int res=solve(c,a-i,dp);
-            if(res>=0&&res<min)
+            if(j%coins[0]==0)
             {
-                min=res+1;
+                dp[1][j]=j/coins[0];
+            }
+            else
+            {
+                dp[1][j]=Integer.MAX_VALUE;
             }
         }
-        dp[a]=(min==Integer.MAX_VALUE)?-1:min;
-        return dp[a];
+        for(int i=2;i<=n;i++)
+        {
+            for(int j=1;j<=A;j++)
+            {
+                if(coins[i-1]<=j)
+                {
+                    dp[i][j]=Math.min(dp[i-1][j],1+dp[i][j-coins[i-1]]);
+                }
+                else
+                {
+                    dp[i][j]=dp[i-1][j];
+                }
+            }
+        }
+        return dp[n][A]>=Integer.MAX_VALUE?-1:(int)dp[n][A];
     }
 }
