@@ -61,3 +61,6 @@ Solved 442/1455 problems.
 
 ## Date - 02/10/2020
 Solved 451/1460 problems.
+
+## Date - 06/10/2020
+Solved 466/1468 problems
