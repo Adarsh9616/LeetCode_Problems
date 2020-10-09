@@ -28,14 +28,19 @@ class Solution
         int n=A.length();
         for(int k=1;k<A.length();k++)
         {
-            boolean swapCheck = solve(A.substring(0,k),B.substring(n-k)) && solve(A.substring(k),B.substring(0,n-k));
-            
-            boolean swapCheck2 = solve(A.substring(0,k),B.substring(0,k)) && solve(A.substring(k),B.substring(k));                                                                   
-            if(swapCheck||swapCheck2)                                                                
+            boolean swapCheck2 = solve(A.substring(0,k),B.substring(0,k)) && solve(A.substring(k),B.substring(k));                                                                              if(swapCheck2)                                                                
             {
                 flag=true;
                 break;
             }
+            boolean swapCheck = solve(A.substring(0,k),B.substring(n-k)) && solve(A.substring(k),B.substring(0,n-k));
+            if(swapCheck)                                                                
+            {
+                flag=true;
+                break;
+            }
+            
+            
         }
         map.put(key,flag);
         return flag;
