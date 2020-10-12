@@ -72,6 +72,6 @@ Solved 484/1468 problems
 ## <center> Date - 12/10/2020  </center>
 <center> Solved 500/1473 problems  </center>
 
-<div style="text-align:center"> <img src="https://github.com/Adarsh9616/LeetCode_Problems/blob/master/Assets/completed500.JPG"> </div>
+<div style="text-align:center">       <img src="https://github.com/Adarsh9616/LeetCode_Problems/blob/master/Assets/completed500.JPG"> </div>
 
 <div style="text-align:center"> <img src="https://github.com/Adarsh9616/LeetCode_Problems/blob/master/Assets/totalQ.JPG" > </div>
