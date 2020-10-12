@@ -68,10 +68,10 @@ Solved 466/1468 problems
 ## Date - 11/10/2020
 Solved 484/1468 problems
 
-# Completed 500 Questions on LeetCode.
+# <center> Completed 500 Questions on LeetCode. <\center>
 ## Date - 12/10/2020
 Solved 500/1473 problems
 
-<img src="https://github.com/Adarsh9616/LeetCode_Problems/blob/master/Assets/completed500.JPG">
+<div style="text-align:center"><img src="https://github.com/Adarsh9616/LeetCode_Problems/blob/master/Assets/completed500.JPG"><\div>
 
-<img src="https://github.com/Adarsh9616/LeetCode_Problems/blob/master/Assets/totalQ.JPG" >
+<div style="text-align:center"><img src="https://github.com/Adarsh9616/LeetCode_Problems/blob/master/Assets/totalQ.JPG" ><\div>
