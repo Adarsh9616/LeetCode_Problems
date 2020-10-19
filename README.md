@@ -68,7 +68,7 @@ Solved 466/1468 problems
 ## Date - 11/10/2020
 Solved 484/1468 problems
 
-# <center> Completed 500 Questions on LeetCode. </center>
+# Completed 500 Questions on LeetCode.
 ## <center> Date - 12/10/2020  </center>
 <center> Solved 500/1473 problems  </center>
 
