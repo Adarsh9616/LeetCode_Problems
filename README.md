@@ -70,7 +70,7 @@ Solved 484/1468 problems
 
 # Completed 500 Questions on LeetCode.
 ##      Date - 12/10/2020  
-     Solved 500/1473 problems 
+Solved 500/1473 problems 
 
 <div style="text-align:center">       <img src="https://github.com/Adarsh9616/LeetCode_Problems/blob/master/Assets/completed500.JPG"> </div>
 
