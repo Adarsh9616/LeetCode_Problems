@@ -1,3 +1,20 @@
+class Solution {
+    public int[] asteroidCollision(int[] asteroids) {
+        Stack<Integer> stack = new Stack();
+        for (int ast: asteroids) {
+            collision: {
+                while (!stack.isEmpty() && ast < 0 && 0 < stack.peek()) {
+                    if (stack.peek() < -ast) {
+                        stack.pop();
+                        continue;
+                    } else if (stack.peek() == -ast) {
+                        stack.pop();
+                    }
+                    break collision;
+                }
+                stack.push(ast);
+            }
+        }
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -8,18 +25,32 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class Solution
+{
+    ListNode curr=new ListNode(0);
+    ListNode temp=curr;
     public ListNode reverseList(ListNode head) 
     {
-        ListNode prev=null;
-        ListNode cur=head;
-        while(cur!=null)
+        solve(head);
+        return curr.next;
+    }
+    void solve(ListNode root)
+    {
+        if(root==null)
         {
-            ListNode temp=cur.next;
-            cur.next=prev;
-            prev=cur;
-            cur=temp;
+            return;
         }
-        return prev;
+        solve(root.next);
+        root.next=null;
+        temp.next=root;
+        temp=temp.next;
+        return ;
+    }
+}
+        int[] ans = new int[stack.size()];
+        for (int t = ans.length - 1; t >= 0; --t) {
+            ans[t] = stack.pop();
+        }
+        return ans;
     }
 }
