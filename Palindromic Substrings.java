@@ -1,27 +1,32 @@
-class Solution 
-{
-    public int countSubstrings(String s) 
+class Solution {
+    public int countSubstrings(String S)
     {
-        int ans=0;
-        for(int i=0;i<s.length();i++)
+        int n=S.length();
+        int count=0;
+        boolean dp[][]=new boolean[n][n];
+        for(int g=0;g<n;g++)
         {
-            int left=i;
-            int right=i;
-            while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) 
+            for(int i=0,j=g;j<n;j++,i++)
             {
-                ans++;
-                left--;
-                right++;
+                if(g==0)
+                {
+                    dp[i][j]=true;
+                }
+                else if(g==1)
+                {
+                    dp[i][j]=S.charAt(i)==S.charAt(j);
+                }
+                else
+                {
+                    dp[i][j]=S.charAt(i)==S.charAt(j)&&dp[i+1][j-1]?true:false;
+                }
+                if(dp[i][j])
+                {
+                    count++;
+                }
             }
-            left=i;
-            right=i+1;
-            while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) 
-            {
-                ans++;
-                left--;
-                right++;
-            }
+            
         }
-        return ans;
+        return count;
     }
 }
