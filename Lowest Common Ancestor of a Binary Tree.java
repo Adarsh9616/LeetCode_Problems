@@ -15,44 +15,20 @@ class Solution
         {
             return null;
         }
-        if(p==root)
+        if(root==p||root==q)
         {
             return root;
         }
-        if(q==root)
+        TreeNode left=lowestCommonAncestor(root.left,p,q);
+        TreeNode right=lowestCommonAncestor(root.right,p,q);
+        if(left!=null&&right!=null)
         {
             return root;
         }
-        List<TreeNode> l1=new ArrayList<>();
-        List<TreeNode> l2=new ArrayList<>();
-        solve(root,p,l1);
-        solve(root,q,l2);
-        int i1=l1.size()-1;int i2=l2.size()-1;
-        while(i1>=0&&i2>=0)
-        {
-            if(l1.get(i1)!=l2.get(i2))
-            {
-                break;
-            }
-            i1--;
-            i2--;
-        }
-        i1++;
-        return l1.get(i1);
+        return left!=null?left:right;
         
     }
-    public boolean solve(TreeNode root,TreeNode x,List<TreeNode> l)
-    {
-        if(root==null)
-        {
-            return false;
-        }
-        
-        if(root==x||solve(root.left,x,l)||solve(root.right,x,l))
-        {
-            l.add(root);
-            return true;
-        }
-        return false;
-    }
+    // public Node solve(TreeNode root,TreeNode x)
+    // {
+    // }
 }
